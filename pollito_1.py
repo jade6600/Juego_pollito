@@ -74,8 +74,8 @@ pollito = Pollito()
 # Crear autos
 autos = []
 for i in range(4):
-    autos.append(Auto(i * 200, 205, -3))
-    autos.append(Auto(i * 200, 345, 3))
+    autos.append(Auto(i * 200, 205, -6))
+    autos.append(Auto(i * 200, 345, 6))
 
 # Vidas y reloj
 vidas = 3
@@ -91,9 +91,9 @@ while jugando:
 
     teclas = pygame.key.get_pressed()
     if teclas[pygame.K_UP]:
-        pollito.rect.y -= 5
+        pollito.rect.y -= 3
     if teclas[pygame.K_DOWN]:
-        pollito.rect.y += 5
+        pollito.rect.y += 3
 
     if pollito.rect.top < 0:
         pollito.rect.top = 0
@@ -132,8 +132,8 @@ while jugando:
 
     pollito.dibujar()
 
-    texto_vidas = fuente.render(f"Vidas: {vidas}", True, BLANCO)
-    pantalla.blit(texto_vidas, (10, 10))
+    texto_vidas = fuente.render(f"Vidas: {vidas}", True, NEGRO)
+    pantalla.blit(texto_vidas, (15, 15))
 
     pygame.display.flip()
     reloj.tick(60)
