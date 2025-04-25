@@ -140,3 +140,7 @@ while jugando:
 
 pygame.quit()
 sys.exit()
+
+
+
+z
